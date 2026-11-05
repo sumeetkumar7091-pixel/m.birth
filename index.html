@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Wife ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #2b0018, #79002e, #250014);
+    color: white;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Background hearts */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ff8bb8;
+    font-size: 22px;
+    animation: float 8s linear infinite;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+    20% { opacity: 1; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Main slide */
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Heading */
+h1 {
+    color: #ffd1e1;
+    font-size: clamp(27px, 5vw, 48px);
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px #ff4081;
+}
+
+/* Image */
+.photo {
+    width: min(75vw, 300px);
+    height: min(75vw, 300px);
+    object-fit: cover;
+    border: 5px solid #ffd1dc;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #ff5c9a;
+    margin: 15px 0;
+}
+
+/* Romantic text */
+.note {
+    font-size: clamp(16px, 2.5vw, 21px);
+    color: #ffe8f0;
+    max-width: 650px;
+    line-height: 1.7;
+    margin: 10px auto;
+}
+
+.shayari {
+    color: #ffc1d9;
+    font-size: clamp(17px, 2.8vw, 23px);
+    font-style: italic;
+    line-height: 1.8;
+    margin-top: 10px;
+    max-width: 650px;
+}
+
+.signature {
+    color: #ffb6cf;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Buttons */
+.controls {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+}
+
+button {
+    background: #ff4f87;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 12px #ff5c9a;
+}
+
+button:hover {
+    background: #ff1766;
+    transform: scale(1.05);
+}
+
+.counter {
+    color: #ffd1dc;
+    font-size: 16px;
+}
+
+/* Music button */
+.music {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 20;
+}
+
+/* Small screen */
+@media(max-height: 700px) {
+    .photo {
+        width: min(45vw, 200px);
+        height: min(45vw, 200px);
+    }
+    .slide {
+        padding-bottom: 65px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ONE SONG FOR THE ENTIRE WEBSITE -->
+<audio id="song" loop>
+    <source src="romantic-song.mpeg" type="audio/mpeg">
+</audio>
+
+<button class="music" onclick="toggleMusic()" id="musicBtn">
+    🎵 Play Music
+</button>
+
+<div class="slider">
+
+    <!-- SLIDE 1 -->
+    <section class="slide active">
+        <h1>🎂 Happy Birthday My Love ❤️</h1>
+
+        <img src="photo1.jpeg" class="photo" alt="Our beautiful memory">
+
+        <p class="note">
+            Meri jaan, aaj ka din mere liye duniya ka sabse
+            khoobsurat din hai, kyunki aaj meri duniya mein
+            roshni bankar aane wali meri wife ka birthday hai.
+            Tum meri zindagi ka sabse khoobsurat tohfa ho.
+        </p>
+
+        <p class="shayari">
+            "चाँद से खूबसूरत तेरा चेहरा है,<br>
+            मेरी हर खुशी में बस तेरा पहरा है,<br>
+            जन्मदिन पर बस इतनी सी दुआ है,<br>
+            तेरा साथ मिले, यही सपना मेरा है। ❤️"
+        </p>
+
+        <div class="signature">Forever Yours, Your Husband ❤️</div>
+    </section>
+
+
+    <!-- SLIDE 2 -->
+    <section class="slide">
+        <h1>💕 You Are My Happiness</h1>
+
+        <img src="photo2.jpeg" class="photo" alt="My happiness">
+
+        <p class="note">
+            Tumhari smile meri favourite hai.
+            Jab tum hasta ho, toh meri duniya aur bhi
+            khoobsurat ho jaati hai. Main chahta hoon ki
+            tumhari zindagi hamesha khushiyon se bhari rahe.
+        </p>
+
+        <p class="shayari">
+            "तेरी मुस्कान मेरी पहचान बन गई,<br>
+            तेरी खुशी मेरी जान बन गई,<br>
+            अब और क्या मांगू मैं खुदा से,<br>
+            तू मिली तो मेरी दुनिया गुलिस्तान बन गई। ❤️"
+        </p>
+
+        <div class="signature">I Love You, My Wife 💗</div>
+    </section>
+
+
+    <!-- SLIDE 3 -->
+    <section class="slide">
+        <h1>🌹 My Forever Love</h1>
+
+        <img src="photo3.jpeg" class="photo" alt="My forever love">
+
+        <p class="note">
+            Zindagi ke har mod par main tumhara haath
+            thaam kar chalna chahta hoon. Har mushkil mein
+            tumhara saath dena aur har khushi tumhare saath
+            manana hi meri sabse badi khwahish hai.
+        </p>
+
+        <p class="shayari">
+            "हाथों में तेरा हाथ रहे,<br>
+            हर जन्म में तेरा साथ रहे,<br>
+            चाहे बदल जाए ये सारी दुनिया,<br>
+            मेरे दिल में बस तेरा ही नाम रहे। ❤️"
+        </p>
+
+        <div class="signature">Only Yours Forever 💍</div>
+    </section>
+
+
+    <!-- SLIDE 4 -->
+    <section class="slide">
+        <h1>🥰 You Complete Me</h1>
+
+        <img src="photo4.jpeg" class="photo" alt="My special person">
+
+        <p class="note">
+            Tum sirf meri wife nahi, meri best friend,
+            meri strength aur meri sabse pyari feeling ho.
+            Tumhare bina meri har khushi adhoori hai.
+            Thank you meri life ko itna special banane ke liye.
+        </p>
+
+        <p class="shayari">
+            "अधूरी थी मेरी कहानी तेरे आने से पहले,<br>
+            सूनी थी मेरी जिंदगी तेरे मुस्कुराने से पहले,<br>
+            अब हर लम्हा खूबसूरत लगता है,<br>
+            तुझे अपना बनाने के बाद से। ❤️"
+        </p>
+
+        <div class="signature">My World Is You 🌍</div>
+    </section>
+
+
+    <!-- SLIDE 5 -->
+    <section class="slide">
+        <h1>💖 A Promise For You</h1>
+
+        <img src="photo5.jpeg" class="photo" alt="Our love">
+
+        <p class="note">
+            Main promise karta hoon ki tumhari aankhon mein
+            kabhi aansu aayein toh unhe pochhne ki wajah
+            banunga. Tumhari har khushi mein saath rahunga
+            aur har din tumhe pehle se zyada pyaar karunga.
+        </p>
+
+        <p class="shayari">
+            "ना कभी तेरा साथ छोड़ेंगे,<br>
+            ना कभी तेरा दिल तोड़ेंगे,<br>
+            वादा है तुमसे मेरी जान,<br>
+            हर जन्म में तुझसे ही रिश्ता जोड़ेंगे। ❤️"
+        </p>
+
+        <div class="signature">Promise, Your Husband ❤️</div>
+    </section>
+
+
+    <!-- SLIDE 6 -->
+    <section class="slide">
+        <h1>🎉 Happy Birthday My Queen 👑</h1>
+
+        <img src="photo6.jpeg" class="photo" alt="My birthday queen">
+
+        <p class="note">
+            Happy Birthday meri pyari wife!
+            Meri dua hai ki tumhari har wish poori ho,
+            tum hamesha healthy, happy aur successful raho.
+            Aaj ka din sirf tumhara hai.
+            I love you more than words can ever express.
+        </p>
+
+        <p class="shayari">
+            "तेरी जिंदगी में खुशियों की बहार रहे,<br>
+            हर दिन तेरा प्यार से गुलज़ार रहे,<br>
+            जन्मदिन पर बस यही दुआ है मेरी,<br>
+            तेरा चेहरा हमेशा यूँ ही चमकता रहे। ❤️"
+        </p>
+
+        <div class="signature">
+            Happy Birthday My Love!<br>
+            With All My Love, Your Husband ❤️
+        </div>
+    </section>
+
+
+    <!-- NAVIGATION -->
+    <div class="controls">
+        <button onclick="previousSlide()">❮ Previous</button>
+        <span class="counter" id="counter">1 / 6</span>
+        <button onclick="nextSlide()">Next ❯</button>
+    </div>
+
+</div>
+
+
+<script>
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slide");
+const counter = document.getElementById("counter");
+const song = document.getElementById("song");
+const musicBtn = document.getElementById("musicBtn");
+
+let autoSlide;
+
+function showSlide(index) {
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide = (index + slides.length) % slides.length;
+
+    slides[currentSlide].classList.add("active");
+
+    counter.innerText = (currentSlide + 1) + " / " + slides.length;
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+    resetAutoSlide();
+}
+
+function previousSlide() {
+    showSlide(currentSlide - 1);
+    resetAutoSlide();
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 8000);
+}
+
+// Music plays once started and continues between slides
+async function toggleMusic() {
+    if (song.paused) {
+        try {
+            await song.play();
+            musicBtn.innerText = "⏸ Pause Music";
+        } catch (error) {
+            musicBtn.innerText = "🎵 Play Music";
+            alert("Please select your romantic-song.mp3 file.");
+        }
+    } else {
+        song.pause();
+        musicBtn.innerText = "🎵 Play Music";
+    }
+}
+
+// Floating hearts
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+}
+
+setInterval(createHeart, 500);
+
+// Start automatic slideshow
+autoSlide = setInterval(() => {
+    showSlide(currentSlide + 1);
+}, 8000);
+
+</script>
+
+</body>
+</html>
